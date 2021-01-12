@@ -1,6 +1,8 @@
+#!/bin/bash
+
 if [ $# -lt 2 ]
 then
-	echo "tar.sh <KronaTools_version> <Krona_version>"
+	echo "release.sh <KronaTools_version> <Krona_version>"
 	exit
 fi
 
@@ -50,6 +52,6 @@ tar -cnf $release.tar \
 	$release/updateAccessions.sh \
 	$release/updateTaxonomy.sh \
 	$release/deployResources.sh \
-	$release/README.txt \
-	$release/LICENSE.txt
+	$release/README.md \
+	$release/LICENSE
 mv $release KronaTools
